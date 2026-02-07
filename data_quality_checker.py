@@ -5,7 +5,7 @@ print("Automated CSV Data Quality Checker")
 print("----------------------------------")
 
 if len(sys.argv) < 2:
-    print("Usage: data_quality_checker.py <csv_file>")
+    print("Usage: data_quality_checker.py sales_data.csv ")
     sys.exit(1)
 
 file_name = sys.argv[1]
@@ -30,6 +30,6 @@ print(f"Duplicate Rows: {duplicate_rows}")
 print(f"Invalid (Negative) Numeric Values: {negative_values}")
 
 if missing_values == 0 and duplicate_rows == 0 and negative_values == 0:
-    print("Data Quality Status: PASS ✅")
+    print("Data Quality Status: PASS")
 else:
-    print("Data Quality Status: FAIL ❌")
+    print("Data Quality Status: FAIL")
