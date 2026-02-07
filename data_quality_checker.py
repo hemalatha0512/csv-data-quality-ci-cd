@@ -11,7 +11,7 @@ if len(sys.argv) < 2:
 file_name = sys.argv[1]
 
 try:
-    df = pd.read_csv(file_name)
+    df = pd.read_csv(sales_data.csv)
 except FileNotFoundError:
     print("Error: File not found")
     sys.exit(1)
@@ -33,3 +33,4 @@ if missing_values == 0 and duplicate_rows == 0 and negative_values == 0:
     print("Data Quality Status: PASS")
 else:
     print("Data Quality Status: FAIL")
+
